@@ -1,3 +1,4 @@
+
 {
   "name": "ding-ledger",
   "version": "1.0.0",
@@ -8,9 +9,14 @@
     "start": "electron .",
     "build-win": "electron-builder --win nsis --publish never"
   },
+  "dependencies": {
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/android": "^7.0.0"
+  },
   "devDependencies": {
     "electron": "^33.2.1",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "@capacitor/cli": "^7.0.0"
   },
   "build": {
     "appId": "com.dingledger.desktop",
