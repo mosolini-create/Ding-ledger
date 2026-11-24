@@ -40,8 +40,10 @@ jobs:
           npx cap add android
           npx cap sync android
 
+     
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+
 
       - name: Build APK
         run: |
