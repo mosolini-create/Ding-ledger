@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "DINGLEDGER",
+  "short_name": "DINGLEDGER",
+  "description": "DINGLEDGER — Accounting Made Easy | Powered by MOSOLINY",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111b22",
+  "theme_color": "#122b39",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
