@@ -1,17 +1,16 @@
-const CACHE = 'dingledger-v3';
-
-const FILES = [
-  './',
-  './index.html',
-  './manifest.webmanifest',
-  './icon.png',
-  './logo-splash.jpg'
-];
+const CACHE = 'dingledger-v4';
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE).then(cache => cache.addAll(FILES))
+    caches.open(CACHE).then(cache =>
+      cache.addAll([
+        './',
+        './index.html',
+        './manifest.webmanifest'
+      ])
+    )
   );
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
@@ -22,6 +21,7 @@ self.addEventListener('activate', event => {
       )
     )
   );
+  self.clients.claim();
 });
 
 self.addEventListener('fetch', event => {
