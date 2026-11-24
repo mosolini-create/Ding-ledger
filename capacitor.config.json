@@ -1,0 +1,7 @@
+
+{
+  "appId": "com.dingledger.accounting",
+  "appName": "DINGLEDGER",
+  "webDir": ".",
+  "bundledWebRuntime": false
+}
