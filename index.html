@@ -10,7 +10,37 @@
 :root{color-scheme:light dark;--bg:light-dark(#f4f7f8,#111b22);--panel:light-dark(#fff,#1a2932);--text:light-dark(#172a34,#edf4f7);--muted:light-dark(#667984,#a7bac3);--border:light-dark(#dce5e8,#30424d);--green:#18795d;--nav:#122b39}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px Tahoma,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:100vh}.side{background:var(--nav);color:#e9f2f5;padding:20px 12px}.brand{padding:5px 4px 22px;text-align:center}.brand-logo{display:block;width:100%;height:auto;max-width:205px;margin:0 auto;border-radius:10px}.nav{display:block;width:100%;text-align:right;border:0;background:transparent;color:#cbdce2;border-radius:8px;padding:12px 10px;margin:3px 0}.nav.active,.nav:hover{background:#285164;color:#fff}.main{min-width:0;padding:24px;max-width:1450px;width:100%;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}h1{font-size:23px;margin:0 0 7px}h2{font-size:17px;margin:0 0 14px}.muted{color:var(--muted);font-size:12px}.tag,.pill{border-radius:20px;background:light-dark(#e2f4ec,#173b31);color:light-dark(#18744e,#a2e3c7);padding:6px 10px;font-size:11px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.card{border:1px solid var(--border);background:var(--panel);border-radius:13px;padding:16px;min-width:0}.metric{font-size:21px;font-weight:800;margin:12px 0 6px;overflow-wrap:anywhere}.split{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px}.section{margin-top:16px}.rowbetween{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--border);border-radius:8px;padding:10px 13px;background:var(--panel);color:var(--text)}.primary{background:var(--green);border-color:var(--green);color:white}.actions{display:flex;gap:8px;flex-wrap:wrap}.notice{padding:12px;border-radius:9px;background:var(--bg);border:1px solid var(--border);line-height:1.9;margin:12px 0}table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:right;padding:12px 8px;border-bottom:1px solid var(--border)}th{color:var(--muted);font-weight:600}.tablewrap{overflow-x:auto}.field{display:flex;flex-direction:column;gap:7px;margin:12px 0}label{font-size:12px;color:var(--muted)}input,select{width:100%;padding:11px;border:1px solid var(--border);border-radius:8px;background:var(--panel);color:var(--text)}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 14px}.bar{height:7px;border-radius:8px;background:var(--border);overflow:hidden;margin:10px 0}.bar span{display:block;height:100%;background:#23856b}.foot{font-size:11px;color:var(--muted);line-height:1.9;margin-top:22px}.result{font-size:19px;font-weight:bold;margin:14px 0}.install{display:none}
 #lockOverlay{display:none;position:fixed;inset:0;z-index:99999;background:#10232d;color:#f4fbff;align-items:center;justify-content:center;padding:22px;text-align:center}#lockOverlay .lockbox{width:min(440px,100%);background:#193744;border:1px solid #41606d;border-radius:18px;padding:30px 22px;box-shadow:0 20px 70px #0008}#lockOverlay .lockicon{font-size:48px;margin-bottom:12px}#lockOverlay h2{font-size:24px;margin:0 0 12px;color:#fff}#lockOverlay p{line-height:2;color:#d1e0e7}#lockOverlay button{margin-top:10px;background:#18795d;color:#fff;border:0;border-radius:9px;padding:12px 20px;font-weight:bold}#lockOverlay button:focus{outline:3px solid #9fe8ce}
-@media(max-width:760px){.shell{grid-template-columns:1fr}.side{padding:10px;position:sticky;top:0;z-index:2}.brand{padding:3px 5px 10px}.brand-logo{max-width:150px}.navlist{display:flex;gap:5px;overflow:auto}.nav{white-space:nowrap;width:auto;margin:0;padding:9px}.main{padding:13px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}h1{font-size:19px}.metric{font-size:18px}.install{display:inline-block}}
+@media(max-width:760px){
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.shell{display:flex;flex-direction:column;width:100%;max-width:100%;min-width:0;min-height:100vh}
+.side{width:100%;max-width:100%;min-width:0;padding:8px;position:relative;top:auto;z-index:2;overflow:hidden}
+.brand{padding:3px 5px 8px}
+.brand-logo{display:block;width:auto;max-width:min(130px,60vw);max-height:58px;object-fit:contain}
+.navlist{display:flex;flex-wrap:nowrap;gap:5px;width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.nav{flex:0 0 auto;white-space:nowrap;width:auto;min-width:0;margin:0;padding:9px;font-size:12px}
+.main{display:block;width:100%;max-width:100%;min-width:0;margin:0;padding:12px;overflow-x:hidden}
+.top{align-items:flex-start;gap:9px;margin-bottom:14px}
+.top>div{min-width:0;max-width:100%}
+.actions{max-width:100%;gap:6px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.split,.formgrid{grid-template-columns:minmax(0,1fr);gap:10px}
+.card{width:100%;max-width:100%;min-width:0;padding:12px;overflow-wrap:anywhere}
+.metric{font-size:clamp(16px,5vw,19px)}
+h1{font-size:19px}
+.tablewrap{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{min-width:560px}
+input,select,button{max-width:100%;min-width:0}
+#body{width:100%;max-width:100%;min-width:0;overflow-wrap:anywhere}
+#authOverlay{box-sizing:border-box;width:100%;max-width:100%;min-width:0;padding:12px;overflow-y:auto;overflow-x:hidden}
+#authOverlay>div{box-sizing:border-box;width:100%!important;max-width:520px;min-width:0;padding:19px!important;margin:auto}
+#authForm{width:100%;max-width:100%;min-width:0}
+#authForm input{display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0}
+#authForm button{display:block;width:100%;max-width:100%;min-width:0}
+#lockOverlay{box-sizing:border-box;width:100%;max-width:100%;padding:12px}
+#lockOverlay .lockbox{box-sizing:border-box;width:100%;max-width:440px;min-width:0;padding:22px 16px}
+.install{display:inline-block}
+}
+@media(max-width:380px){.grid{grid-template-columns:minmax(0,1fr)}.main{padding:10px}.card{padding:11px}.top{flex-direction:column}.actions{width:100%}}
 @media print{.side,.top .actions,.btn,.foot{display:none!important}.shell{display:block}.main{padding:0}.card{break-inside:avoid}}
 </style>
 </head>
